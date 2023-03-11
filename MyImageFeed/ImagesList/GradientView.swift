@@ -40,13 +40,12 @@ class GradientView:UILabel{
     private func setupGradient() {
         self.layer.addSublayer(gradientLayer)
         setupGradientColors()
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)      //startPoint
         gradientLayer.endPoint = CGPoint(x: 1, y: 1)
     }
     private func setupGradientColors() {
         if let startColor = startColor, let endColor = endColor {
             gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
         }
-
     }
 }
